@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Profil - StreamFlix</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<header class="nav">
+	<h1 class="logo">StreamFlix</h1>
+	<nav>
+		<a href="index.html">Accueil</a>
+		<a href="index.html#catalogue">Films</a>
+	</nav>
+	<div class="nav-actions">
+		<input class="search" type="search" placeholder="Rechercher" oninput="searchMovie()">
+		<img class="user-avatar" src="https://i.pravatar.cc/40" alt="avatar">
+	</div>
+</header>
+
+<main class="profile-container">
+	<aside class="profiles-list">
+		<h3>Profils</h3>
+		<div class="profile-card active" data-name="NSI">
+			<img src="https://i.pravatar.cc/80?img=3" alt="NSI">
+			<span>NSI</span>
+		</div>
+		<div class="profile-card" data-name="Invité">
+			<img src="https://i.pravatar.cc/80?img=5" alt="Invité">
+			<span>Invité</span>
+		</div>
+		<button class="btn" id="addProfile">+ Ajouter un profil</button>
+	</aside>
+
+	<section class="profile-main">
+		<div class="profile-header">
+			<img class="profile-big" id="profileAvatar" src="https://i.pravatar.cc/150?img=3" alt="avatar">
+			<div>
+				<input id="profileName" class="profile-name" value="NSI">
+				<p class="membership">Abonnement : <strong>Premium</strong></p>
+			</div>
+		</div>
+
+		<div class="profile-actions">
+			<button class="btn" id="saveProfile">Enregistrer</button>
+			<button class="btn" id="manageBtn">Gérer le profil</button>
+			<button class="btn" id="signOut">Se déconnecter</button>
+		</div>
+
+		<div class="profile-settings">
+			<h4>Paramètres</h4>
+			<label>Langue
+				<select id="langSelect">
+					<option value="fr">Français</option>
+					<option value="en">English</option>
+				</select>
+			</label>
+			<label>Contrôle parental
+				<select id="parental">
+					<option value="off">Désactivé</option>
+					<option value="on">Activé</option>
+				</select>
+			</label>
+		</div>
+	</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
