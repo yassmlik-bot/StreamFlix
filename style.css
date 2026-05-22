@@ -26,11 +26,14 @@ body{
 }
 .logo{color:#e50914;font-weight:700;font-size:22px}
 .logo{font-family: 'Montserrat', Arial, sans-serif;letter-spacing:1px}
-.nav .links{display:flex;align-items:center;gap:32px}
+.nav nav{display:flex;align-items:center;gap:34px}
 .nav-actions{display:flex;align-items:center;gap:16px}
 .nav .search{width:220px}
+.nav .search::placeholder{color:rgba(255,255,255,0.65)}
 .nav a{color:#fff;text-decoration:none;opacity:0.85;font-size:14px;font-weight:600;letter-spacing:0.02em;transition:opacity .2s ease,color .2s ease}
 .nav a:hover{opacity:1;color:#ffdbdb}
+
+.no-results{margin:10px auto 0;padding:16px 22px;max-width:1200px;text-align:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;color:#f4f4f4;font-size:15px}
 .nav .search{padding:8px 12px;border-radius:20px;border:0;outline:none;width:180px;background:rgba(255,255,255,0.08);color:#fff}
 .avatar-wrap{position:relative;z-index:40}
 .user-avatar{width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,0.14);cursor:pointer;transition:transform .2s ease}
@@ -80,10 +83,29 @@ body{
 .player.playing .player-frame{z-index:2}
 
 /* Profile & small components */
-.profile-container{display:flex;gap:24px;padding:28px;align-items:flex-start}
-.profiles-list{width:220px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
-.profile-card{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;cursor:pointer}
-.profile-card img{width:48px;height:48px;border-radius:6px;object-fit:cover}
+.profile-container{display:flex;gap:24px;padding:28px;align-items:flex-start;max-width:1180px;margin:0 auto}
+.profiles-list{width:240px;background:rgba(255,255,255,0.04);padding:20px;border-radius:18px;border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(10px)}
+.profiles-list h3{font-size:18px;margin-bottom:16px;letter-spacing:0.03em;color:#fff}
+.profile-card{display:flex;align-items:center;gap:12px;padding:12px 10px;border-radius:14px;cursor:pointer;transition:transform .2s ease,background .2s ease,border .2s ease}
+.profile-card.active{background:rgba(229,9,20,0.18);border:1px solid rgba(229,9,20,0.35)}
+.profile-card:hover{transform:translateX(2px);background:rgba(255,255,255,0.06)}
+.profile-card img{width:54px;height:54px;border-radius:12px;object-fit:cover}
+.profile-card span{font-size:15px;color:#f4f4f4;font-weight:600}
+.profile-main{flex:1;background:rgba(255,255,255,0.03);padding:28px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 18px 60px rgba(0,0,0,0.2)}
+.profile-header{display:flex;align-items:center;gap:22px;margin-bottom:24px}
+.profile-big{width:120px;height:120px;border-radius:22px;object-fit:cover;border:3px solid rgba(229,9,20,0.8)}
+.profile-label{display:block;margin-bottom:8px;color:rgba(255,255,255,0.75);font-size:13px;font-weight:600}
+.profile-name{width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:#fff;font-size:16px;outline:none}
+.profile-name:focus{border-color:#e50914;box-shadow:0 0 0 3px rgba(229,9,20,0.15)}
+.membership{margin-top:10px;color:#d8d8d8;font-size:14px}
+.profile-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:26px}
+.profile-actions .btn{min-width:140px}
+.profile-message{padding:14px 18px;background:rgba(229,9,20,0.18);border:1px solid rgba(229,9,20,0.35);border-radius:14px;color:#fff;font-size:14px;margin-bottom:22px}
+.profile-settings{background:rgba(255,255,255,0.02);padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,0.06)}
+.profile-settings h4{margin-bottom:16px;font-size:18px}
+.profile-settings label{display:block;margin-bottom:14px;color:#d9d9d9;font-size:15px}
+.profile-settings select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.5);color:#fff;outline:none}
+.profile-settings select option{background:#111}
 
 /* Responsive tweaks */
 @media (max-width:1000px){
